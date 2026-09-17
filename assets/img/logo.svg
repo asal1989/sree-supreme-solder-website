@@ -1,0 +1,242 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+
+    <!-- 3D Navy Blue gradient for big S -->
+    <linearGradient id="navyFace" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%"   stop-color="#4A6DD4"/>
+      <stop offset="35%"  stop-color="#1D3691"/>
+      <stop offset="70%"  stop-color="#0F1D5C"/>
+      <stop offset="100%" stop-color="#08102E"/>
+    </linearGradient>
+    <linearGradient id="navySide" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#060C22"/>
+      <stop offset="100%" stop-color="#091840"/>
+    </linearGradient>
+
+    <!-- 3D Silver gradient for small S -->
+    <linearGradient id="silverFace" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%"   stop-color="#F0F0F0"/>
+      <stop offset="30%"  stop-color="#C8C8C8"/>
+      <stop offset="65%"  stop-color="#8A8A8A"/>
+      <stop offset="100%" stop-color="#505050"/>
+    </linearGradient>
+    <linearGradient id="silverSide" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#282828"/>
+      <stop offset="100%" stop-color="#3C3C3C"/>
+    </linearGradient>
+
+    <!-- Soldering iron body — metallic cylinder -->
+    <linearGradient id="ironBody" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#505050"/>
+      <stop offset="15%"  stop-color="#909090"/>
+      <stop offset="35%"  stop-color="#E8E8E8"/>
+      <stop offset="50%"  stop-color="#F8F8F8"/>
+      <stop offset="65%"  stop-color="#D0D0D0"/>
+      <stop offset="85%"  stop-color="#989898"/>
+      <stop offset="100%" stop-color="#606060"/>
+    </linearGradient>
+    <linearGradient id="ironTip" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#3A3A3A"/>
+      <stop offset="40%"  stop-color="#787878"/>
+      <stop offset="60%"  stop-color="#909090"/>
+      <stop offset="100%" stop-color="#3A3A3A"/>
+    </linearGradient>
+    <linearGradient id="ironCap" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#FFFFFF" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#909090" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="gripBand" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#404040"/>
+      <stop offset="50%"  stop-color="#686868"/>
+      <stop offset="100%" stop-color="#404040"/>
+    </linearGradient>
+
+    <!-- Circle arcs -->
+    <linearGradient id="blueArc" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#3055CC"/>
+      <stop offset="50%"  stop-color="#1D3691"/>
+      <stop offset="100%" stop-color="#112060"/>
+    </linearGradient>
+    <linearGradient id="silverArc" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#A8A8A8"/>
+      <stop offset="40%"  stop-color="#E0E0E0"/>
+      <stop offset="70%"  stop-color="#F4F4F4"/>
+      <stop offset="100%" stop-color="#B0B0B0"/>
+    </linearGradient>
+
+    <!-- Solder puddle at tip -->
+    <radialGradient id="solderPuddle" cx="40%" cy="30%" r="60%">
+      <stop offset="0%"   stop-color="#E0E0E0"/>
+      <stop offset="100%" stop-color="#888888"/>
+    </radialGradient>
+
+    <!-- Drop shadow filter -->
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="3" dy="5" stdDeviation="5" flood-color="#00000060"/>
+    </filter>
+    <!-- Soft glow for iron -->
+    <filter id="ironGlow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000040"/>
+    </filter>
+    <!-- Letter depth shadow -->
+    <filter id="letterDepth" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="5" dy="6" stdDeviation="3" flood-color="#00000070"/>
+    </filter>
+
+  </defs>
+
+  <!-- ── WHITE BACKGROUND ── -->
+  <rect width="512" height="512" fill="white"/>
+
+  <!-- ── SUBTLE BACKGROUND GLOW ── -->
+  <circle cx="256" cy="230" r="185" fill="#F0F4FF" opacity="0.5"/>
+
+  <!-- ══════════════════════════════════════ -->
+  <!--  CIRCLE RING (blue top, silver bottom) -->
+  <!-- ══════════════════════════════════════ -->
+  <!-- Circle: center (256, 230), radius 168 -->
+
+  <!-- Blue outer arc shadow -->
+  <path d="M 96,295 A 168,168 0 1 1 416,295"
+        fill="none" stroke="#00000018" stroke-width="20"
+        stroke-linecap="round" transform="translate(2,4)"/>
+
+  <!-- Main blue arc (upper ~70%) -->
+  <path d="M 96,295 A 168,168 0 1 1 416,295"
+        fill="none" stroke="url(#blueArc)" stroke-width="14"
+        stroke-linecap="round"/>
+
+  <!-- Blue arc inner highlight (3D rim effect) -->
+  <path d="M 96,295 A 168,168 0 1 1 416,295"
+        fill="none" stroke="white" stroke-width="3" stroke-opacity="0.25"
+        stroke-linecap="round"/>
+
+  <!-- Silver arc (lower ~30%) shadow -->
+  <path d="M 96,295 A 168,168 0 0 0 416,295"
+        fill="none" stroke="#00000018" stroke-width="20"
+        stroke-linecap="round" transform="translate(2,4)"/>
+
+  <!-- Silver arc -->
+  <path d="M 96,295 A 168,168 0 0 0 416,295"
+        fill="none" stroke="url(#silverArc)" stroke-width="14"
+        stroke-linecap="round"/>
+
+  <!-- Silver arc top highlight -->
+  <path d="M 96,295 A 168,168 0 0 0 416,295"
+        fill="none" stroke="white" stroke-width="3" stroke-opacity="0.35"
+        stroke-linecap="round"/>
+
+  <!-- ══════════════════════════════════════ -->
+  <!--  BIG S — NAVY BLUE — 3D EXTRUDED       -->
+  <!-- ══════════════════════════════════════ -->
+
+  <!-- Extrusion / side face (creates depth illusion) -->
+  <text x="126" y="318"
+        font-family="'Arial Black', 'Franklin Gothic Heavy', Impact, sans-serif"
+        font-size="215" font-weight="900"
+        fill="url(#navySide)" transform="translate(9,9)" opacity="0.85">S</text>
+  <text x="126" y="318"
+        font-family="'Arial Black', 'Franklin Gothic Heavy', Impact, sans-serif"
+        font-size="215" font-weight="900"
+        fill="url(#navySide)" transform="translate(6,6)" opacity="0.7">S</text>
+  <text x="126" y="318"
+        font-family="'Arial Black', 'Franklin Gothic Heavy', Impact, sans-serif"
+        font-size="215" font-weight="900"
+        fill="url(#navySide)" transform="translate(3,3)" opacity="0.55">S</text>
+
+  <!-- Front face -->
+  <text x="126" y="318"
+        font-family="'Arial Black', 'Franklin Gothic Heavy', Impact, sans-serif"
+        font-size="215" font-weight="900"
+        fill="url(#navyFace)"
+        filter="url(#letterDepth)">S</text>
+
+  <!-- Top edge highlight on big S -->
+  <text x="126" y="318"
+        font-family="'Arial Black', 'Franklin Gothic Heavy', Impact, sans-serif"
+        font-size="215" font-weight="900"
+        fill="none" stroke="white" stroke-width="1.5" stroke-opacity="0.25">S</text>
+
+  <!-- ══════════════════════════════════════ -->
+  <!--  SMALL S — SILVER — 3D EXTRUDED        -->
+  <!-- ══════════════════════════════════════ -->
+
+  <!-- Extrusion layers -->
+  <text x="280" y="318"
+        font-family="'Arial Black', 'Franklin Gothic Heavy', Impact, sans-serif"
+        font-size="160" font-weight="900"
+        fill="url(#silverSide)" transform="translate(8,8)" opacity="0.75">S</text>
+  <text x="280" y="318"
+        font-family="'Arial Black', 'Franklin Gothic Heavy', Impact, sans-serif"
+        font-size="160" font-weight="900"
+        fill="url(#silverSide)" transform="translate(5,5)" opacity="0.6">S</text>
+  <text x="280" y="318"
+        font-family="'Arial Black', 'Franklin Gothic Heavy', Impact, sans-serif"
+        font-size="160" font-weight="900"
+        fill="url(#silverSide)" transform="translate(3,3)" opacity="0.5">S</text>
+
+  <!-- Front face -->
+  <text x="280" y="318"
+        font-family="'Arial Black', 'Franklin Gothic Heavy', Impact, sans-serif"
+        font-size="160" font-weight="900"
+        fill="url(#silverFace)"
+        filter="url(#letterDepth)">S</text>
+
+  <!-- Silver S highlight -->
+  <text x="280" y="318"
+        font-family="'Arial Black', 'Franklin Gothic Heavy', Impact, sans-serif"
+        font-size="160" font-weight="900"
+        fill="none" stroke="white" stroke-width="1.2" stroke-opacity="0.3">S</text>
+
+  <!-- ══════════════════════════════════════ -->
+  <!--  SOLDERING IRON (diagonal, 3D)         -->
+  <!--  Rotated -43° around center (256,230)  -->
+  <!-- ══════════════════════════════════════ -->
+  <g transform="rotate(-43, 256, 230)" filter="url(#ironGlow)">
+
+    <!-- Iron body shadow -->
+    <rect x="245" y="62" width="24" height="218" rx="7"
+          fill="#000000" opacity="0.25" transform="translate(5,5)"/>
+
+    <!-- Iron body (cylindrical metallic) -->
+    <rect x="245" y="62" width="24" height="218" rx="7"
+          fill="url(#ironBody)"/>
+
+    <!-- Specular highlight (the bright strip down the cylinder) -->
+    <rect x="251" y="66" width="7" height="210" rx="3.5"
+          fill="white" opacity="0.42"/>
+
+    <!-- Grip knurling bands (3 rings near middle) -->
+    <rect x="243" y="160" width="28" height="5" rx="2" fill="url(#gripBand)"/>
+    <rect x="243" y="172" width="28" height="5" rx="2" fill="url(#gripBand)"/>
+    <rect x="243" y="184" width="28" height="5" rx="2" fill="url(#gripBand)"/>
+
+    <!-- Transition collar (body→tip) -->
+    <path d="M 245,280 L 269,280 L 265,305 L 249,305 Z"
+          fill="#888888"/>
+    <path d="M 247,280 L 264,280 L 261,305 L 250,305 Z"
+          fill="#B0B0B0" opacity="0.5"/>
+
+    <!-- Tapered tip (the solder point) -->
+    <path d="M 249,305 L 265,305 L 257,338 Z"
+          fill="url(#ironTip)"/>
+
+    <!-- Side highlight on tip -->
+    <path d="M 252,305 L 260,305 L 257,330 Z"
+          fill="white" opacity="0.2"/>
+
+    <!-- Solder puddle at very tip -->
+    <ellipse cx="257" cy="340" rx="7" ry="4"
+             fill="url(#solderPuddle)"/>
+    <ellipse cx="255" cy="339" rx="3" ry="2"
+             fill="white" opacity="0.5"/>
+
+    <!-- Top cap of iron (back end, rounded) -->
+    <ellipse cx="257" cy="62" rx="12" ry="4.5"
+             fill="url(#ironCap)"/>
+    <ellipse cx="255" cy="61" rx="7" ry="2.5"
+             fill="white" opacity="0.6"/>
+
+  </g>
+
+</svg>
